@@ -8,55 +8,51 @@ import java.time.LocalDateTime;
 public class ImportHistoryDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int import_detail_id;
+    private int importDetailId;
 
-    private int import_history_id;
+    private int importHistoryId;
 
-    private int product_id;
+    private int productId;
 
     private int quantity;
 
-    private int original_id;
+    private int originalId;
 
-    private int total_price;
+    private int totalPrice;
 
     public ImportHistoryDetail() {
     }
 
-    public ImportHistoryDetail(int import_history_id,
-                               int product_id,
-                               int quantity,
-                               int original_id,
-                               int total_price) {
-        this.import_history_id = import_history_id;
-        this.product_id = product_id;
+    public ImportHistoryDetail(int importHistoryId, int productId, int quantity, int originalId, int totalPrice) {
+        this.importHistoryId = importHistoryId;
+        this.productId = productId;
         this.quantity = quantity;
-        this.original_id = original_id;
-        this.total_price = total_price;
+        this.originalId = originalId;
+        this.totalPrice = totalPrice;
     }
 
-    public int getImport_detail_id() {
-        return import_detail_id;
+    public int getImportDetailId() {
+        return importDetailId;
     }
 
-    public void setImport_detail_id(int import_detail_id) {
-        this.import_detail_id = import_detail_id;
+    public void setImportDetailId(int importDetailId) {
+        this.importDetailId = importDetailId;
     }
 
-    public int getImport_history_id() {
-        return import_history_id;
+    public int getImportHistoryId() {
+        return importHistoryId;
     }
 
-    public void setImport_history_id(int import_history_id) {
-        this.import_history_id = import_history_id;
+    public void setImportHistoryId(int importHistoryId) {
+        this.importHistoryId = importHistoryId;
     }
 
-    public int getProduct_id() {
-        return product_id;
+    public int getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(int product_id) {
-        this.product_id = product_id;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
     public int getQuantity() {
@@ -67,19 +63,19 @@ public class ImportHistoryDetail {
         this.quantity = quantity;
     }
 
-    public int getOriginal_id() {
-        return original_id;
+    public int getOriginalId() {
+        return originalId;
     }
 
-    public void setOriginal_id(int original_id) {
-        this.original_id = original_id;
+    public void setOriginalId(int originalId) {
+        this.originalId = originalId;
     }
 
-    public int getTotal_price() {
-        return total_price;
+    public int getTotalPrice() {
+        return totalPrice;
     }
 
-    public void setTotal_price(int total_price) {
-        this.total_price = total_price;
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
     }
 }

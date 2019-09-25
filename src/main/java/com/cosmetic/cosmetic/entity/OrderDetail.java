@@ -7,49 +7,48 @@ import javax.persistence.*;
 public class OrderDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int order_detail_id;
+    private int orderDetailId;
 
-    private int order_id;
+    private int orderId;
 
-    private int product_id;
+    private int productId;
 
     private int quantity;
 
-    private int unit_price;
+    private int unitPrice;
 
     public OrderDetail() {
     }
 
-    public OrderDetail(int order_id, int product_id,
-                       int quantity, int unit_price) {
-        this.order_id = order_id;
-        this.product_id = product_id;
+    public OrderDetail(int orderId, int productId, int quantity, int unitPrice) {
+        this.orderId = orderId;
+        this.productId = productId;
         this.quantity = quantity;
-        this.unit_price = unit_price;
+        this.unitPrice = unitPrice;
     }
 
-    public int getOrder_detail_id() {
-        return order_detail_id;
+    public int getOrderDetailId() {
+        return orderDetailId;
     }
 
-    public void setOrder_detail_id(int order_detail_id) {
-        this.order_detail_id = order_detail_id;
+    public void setOrderDetailId(int orderDetailId) {
+        this.orderDetailId = orderDetailId;
     }
 
-    public int getOrder_id() {
-        return order_id;
+    public int getOrderId() {
+        return orderId;
     }
 
-    public void setOrder_id(int order_id) {
-        this.order_id = order_id;
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
     }
 
-    public int getProduct_id() {
-        return product_id;
+    public int getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(int product_id) {
-        this.product_id = product_id;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
     public int getQuantity() {
@@ -60,11 +59,11 @@ public class OrderDetail {
         this.quantity = quantity;
     }
 
-    public int getUnit_price() {
-        return unit_price;
+    public int getUnitPrice() {
+        return unitPrice;
     }
 
-    public void setUnit_price(int unit_price) {
-        this.unit_price = unit_price;
+    public void setUnitPrice(int unitPrice) {
+        this.unitPrice = unitPrice;
     }
 }

@@ -8,39 +8,38 @@ import java.time.LocalDateTime;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int product_id;
+    private int productId;
 
     private String name;
 
     private int quantity;
 
-    private int original_price;
+    private int originalPrice;
 
     private int price;
 
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
-    private LocalDateTime updated_at;
+    private LocalDateTime updatedAt;
 
     public Product() {
     }
 
-    public Product(String name, int quantity, int original_price, int price,
-                   LocalDateTime created_at, LocalDateTime updated_at) {
+    public Product(String name, int quantity, int originalPrice, int price, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.name = name;
         this.quantity = quantity;
-        this.original_price = original_price;
+        this.originalPrice = originalPrice;
         this.price = price;
-        this.created_at = created_at;
-        this.updated_at = updated_at;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
-    public int getProduct_id() {
-        return product_id;
+    public int getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(int product_id) {
-        this.product_id = product_id;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
     public String getName() {
@@ -59,12 +58,12 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public int getOriginal_price() {
-        return original_price;
+    public int getOriginalPrice() {
+        return originalPrice;
     }
 
-    public void setOriginal_price(int original_price) {
-        this.original_price = original_price;
+    public void setOriginalPrice(int originalPrice) {
+        this.originalPrice = originalPrice;
     }
 
     public int getPrice() {
@@ -75,19 +74,19 @@ public class Product {
         this.price = price;
     }
 
-    public LocalDateTime getCreated_at() {
-        return created_at;
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreated_at(LocalDateTime created_at) {
-        this.created_at = created_at;
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public LocalDateTime getUpdated_at() {
-        return updated_at;
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdated_at(LocalDateTime updated_at) {
-        this.updated_at = updated_at;
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }

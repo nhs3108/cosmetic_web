@@ -7,41 +7,41 @@ import javax.persistence.*;
 public class PromotionDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int promotion_product_id;
+    private int promotionProductId;
 
-    private int promotion_id;
+    private int promotionId;
 
-    private int product_id;
+    private int productId;
 
     public PromotionDetail() {
     }
 
-    public PromotionDetail(int promotion_id, int product_id) {
-        this.promotion_id = promotion_id;
-        this.product_id = product_id;
+    public PromotionDetail(int promotionId, int productId) {
+        this.promotionId = promotionId;
+        this.productId = productId;
     }
 
-    public int getPromotion_product_id() {
-        return promotion_product_id;
+    public int getPromotionProductId() {
+        return promotionProductId;
     }
 
-    public void setPromotion_product_id(int promotion_product_id) {
-        this.promotion_product_id = promotion_product_id;
+    public void setPromotionProductId(int promotionProductId) {
+        this.promotionProductId = promotionProductId;
     }
 
-    public int getPromotion_id() {
-        return promotion_id;
+    public int getPromotionId() {
+        return promotionId;
     }
 
-    public void setPromotion_id(int promotion_id) {
-        this.promotion_id = promotion_id;
+    public void setPromotionId(int promotionId) {
+        this.promotionId = promotionId;
     }
 
-    public int getProduct_id() {
-        return product_id;
+    public int getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(int product_id) {
-        this.product_id = product_id;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 }

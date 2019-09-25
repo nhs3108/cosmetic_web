@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 public class Promotion {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int promotion_id;
+    private int promotionId;
 
     private int discount;
 
@@ -18,30 +18,27 @@ public class Promotion {
 
     private LocalDateTime endTime;
 
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
-    private LocalDateTime updated_at;
+    private LocalDateTime updatedAt;
 
     public Promotion() {
     }
 
-    public Promotion(int promotion_id, int discount, LocalDateTime startTime,
-                     LocalDateTime endTime, LocalDateTime created_at,
-                     LocalDateTime updated_at) {
-        this.promotion_id = promotion_id;
+    public Promotion(int discount, LocalDateTime startTime, LocalDateTime endTime, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.discount = discount;
         this.startTime = startTime;
         this.endTime = endTime;
-        this.created_at = created_at;
-        this.updated_at = updated_at;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
-    public int getPromotion_id() {
-        return promotion_id;
+    public int getPromotionId() {
+        return promotionId;
     }
 
-    public void setPromotion_id(int promotion_id) {
-        this.promotion_id = promotion_id;
+    public void setPromotionId(int promotionId) {
+        this.promotionId = promotionId;
     }
 
     public int getDiscount() {
@@ -68,19 +65,19 @@ public class Promotion {
         this.endTime = endTime;
     }
 
-    public LocalDateTime getCreated_at() {
-        return created_at;
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreated_at(LocalDateTime created_at) {
-        this.created_at = created_at;
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public LocalDateTime getUpdated_at() {
-        return updated_at;
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdated_at(LocalDateTime updated_at) {
-        this.updated_at = updated_at;
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }

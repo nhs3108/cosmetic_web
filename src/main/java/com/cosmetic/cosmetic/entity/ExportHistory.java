@@ -8,54 +8,53 @@ import java.time.LocalDateTime;
 public class ExportHistory {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int export_history_id;
+    private int exportHistoryId;
 
-    private  int preson_in_charge;
+    private  int personInCharge;
 
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
-    private LocalDateTime updated_at;
+    private LocalDateTime updatedAt;
 
     public ExportHistory() {
     }
 
-    public ExportHistory(int preson_in_charge,
-                         LocalDateTime created_at,
-                         LocalDateTime updated_at) {
-        this.preson_in_charge = preson_in_charge;
-        this.created_at = created_at;
-        this.updated_at = updated_at;
+    public ExportHistory(int personInCharge, LocalDateTime createdAt, LocalDateTime updatedAt) {
+        this.personInCharge = personInCharge;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
-    public int getExport_history_id() {
-        return export_history_id;
+    public int getExportHistoryId() {
+        return exportHistoryId;
     }
 
-    public void setExport_history_id(int export_history_id) {
-        this.export_history_id = export_history_id;
+    public void setExportHistoryId(int exportHistoryId) {
+        this.exportHistoryId = exportHistoryId;
     }
 
-    public int getPreson_in_charge() {
-        return preson_in_charge;
+    public int getPersonInCharge() {
+        return personInCharge;
     }
 
-    public void setPreson_in_charge(int preson_in_charge) {
-        this.preson_in_charge = preson_in_charge;
+    public void setPersonInCharge(int personInCharge) {
+        this.personInCharge = personInCharge;
     }
 
-    public LocalDateTime getCreated_at() {
-        return created_at;
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreated_at(LocalDateTime created_at) {
-        this.created_at = created_at;
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public LocalDateTime getUpdated_at() {
-        return updated_at;
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdated_at(LocalDateTime updated_at) {
-        this.updated_at = updated_at;
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }
+
