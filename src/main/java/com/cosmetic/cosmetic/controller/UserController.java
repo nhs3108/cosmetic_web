@@ -1,32 +1,19 @@
 package com.cosmetic.cosmetic.controller;
 
-
 import com.cosmetic.cosmetic.entity.User;
 import com.cosmetic.cosmetic.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
-@Scope("session")
-public class TestController {
+public class UserController {
+
     @Autowired
     private UserService userService;
 
-    @GetMapping("/getall")
-    public List<User> getAllUsers() {
-        return userService.getAllUsers();
+    @GetMapping("/")
+    public User getUser() {
+        return userService.getUser("tungvu3181999@gmail.com", "123456");
     }
-//    int x = 10;
-//    @GetMapping("/")
-//    public String home() {
-//        int c = this.x++;
-//        String a = "" + c;
-//        return a;
-//    }
-
-
 }
