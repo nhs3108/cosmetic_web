@@ -6,8 +6,9 @@ import com.cosmetic.cosmetic.entity.User;
 import java.util.List;
 
 public interface UserDAO {
+    void addUser(User user);
 
-    User getUser(String email, String password);
+    User getUserByUserName(String userName);
 
     List<User> getAllUsers();
 }

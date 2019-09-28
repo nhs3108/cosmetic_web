@@ -9,6 +9,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int userId;
 
+    private String userName;
+
     private String fullName;
 
     private String email;
@@ -22,8 +24,8 @@ public class User {
     public User() {
     }
 
-    public User(String fullName, String email,
-                String password, String phone, String address) {
+    public User(String userName, String fullName, String email, String password, String phone, String address) {
+        this.userName = userName;
         this.fullName = fullName;
         this.email = email;
         this.password = password;
@@ -37,6 +39,14 @@ public class User {
 
     public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getFullName() {
