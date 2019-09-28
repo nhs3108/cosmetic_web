@@ -1,22 +1,14 @@
 package com.cosmetic.cosmetic.service;
 
-import com.cosmetic.cosmetic.dao.UserDAO;
 import com.cosmetic.cosmetic.dao.UserRepository;
-import com.cosmetic.cosmetic.entity.CustomUserDetails;
 import com.cosmetic.cosmetic.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
-
-//    @Autowired
-//    private UserDAO userDAO;
-//
 
     @Autowired
     private UserRepository userRepository;
@@ -29,19 +21,24 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User getUser(String sessionId) {
+        return userRepository.findBySessionId(sessionId);
+    }
+
+    @Override
+    public User getUser(String username, String password) {
+        return userRepository.findByUserNameAndPassword(username, password);
+    }
+
+    @Override
+    public void updateUser(User user) {
+        userRepository.save(user);
+    }
+
+    @Override
     public List<User> getAllUsers() {
 //        return userDAO.getAllUsers();
         return userRepository.findAll();
     }
 
-
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//        User user = userDAO.getUserByUserName(username);
-        User user = userRepository.findByUserName(username);
-        if (user == null) {
-            throw new UsernameNotFoundException(username);
-        }
-        return new CustomUserDetails(user);
-    }
 }

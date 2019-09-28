@@ -21,16 +21,19 @@ public class User {
 
     private String address;
 
+    private String sessionId;
+
     public User() {
     }
 
-    public User(String userName, String fullName, String email, String password, String phone, String address) {
+    public User(String userName, String fullName, String email, String password, String phone, String address, String sessionId) {
         this.userName = userName;
         this.fullName = fullName;
         this.email = email;
         this.password = password;
         this.phone = phone;
         this.address = address;
+        this.sessionId = sessionId;
     }
 
     public int getUserId() {
@@ -87,5 +90,13 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getSessionId() {
+        return sessionId;
+    }
+
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
     }
 }
