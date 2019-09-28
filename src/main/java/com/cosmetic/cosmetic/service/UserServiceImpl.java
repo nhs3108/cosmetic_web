@@ -14,30 +14,23 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-//    @Autowired
-//    private UserDAO userDAO;
-//
-
     @Autowired
     private UserRepository userRepository;
 
     @Override
     public User addUser(User user) {
-//        userDAO.addUser(user);
         userRepository.save(user);
         return user;
     }
 
     @Override
     public List<User> getAllUsers() {
-//        return userDAO.getAllUsers();
         return userRepository.findAll();
     }
 
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//        User user = userDAO.getUserByUserName(username);
         User user = userRepository.findByUserName(username);
         if (user == null) {
             throw new UsernameNotFoundException(username);

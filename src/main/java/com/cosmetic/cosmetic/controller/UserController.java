@@ -21,7 +21,7 @@ public class UserController {
     @GetMapping("/add")
     public User getUser() {
         User user = new User();
-        user.setUserName("tungvu31899");
+        user.setUserName("tungvu318");
         user.setAddress("hn");
         user.setEmail("tungvu31010@gmail.com");
         user.setFullName("Vu Van Tung");
@@ -29,10 +29,5 @@ public class UserController {
         user.setPassword(passwordEncoder.encode("123456"));
         userService.addUser(user);
         return user;
-    }
-
-    @GetMapping("/")
-    public List<User> get() {
-        return userService.getAllUsers();
     }
 }
